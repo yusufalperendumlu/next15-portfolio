@@ -1,5 +1,8 @@
 import type { Metadata } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
+import Image from "next/image";
+import { images } from "@/constants";
+import Navbar from "@/components/navbar";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -10,6 +13,16 @@ const geistMono = Geist_Mono({
   variable: "--font-geist-mono",
   subsets: ["latin"],
 });
+
+const background = {
+  backgroundImage: images.backgroundImage,
+  dark: {
+    background: "#37373c",
+  },
+  light: {
+    background: "#dedef6",
+  },
+};
 
 export const metadata: Metadata = {
   title: {
@@ -27,9 +40,22 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body
-        className={`${geistSans.variable} ${geistMono.variable} antialiased`}
+        className={`${geistSans.variable} ${geistMono.variable} antialiased flex items-center justify-center w-full h-full overflow-x-hidden`}
+        style={{
+          background: background.dark.background,
+        }}
       >
+        <Image
+          src={background.backgroundImage}
+          alt="background"
+          layout="fill"
+          objectFit="cover"
+          objectPosition="center"
+          className="fixed bg-scroll bg-no-repeat top-0 left-0 -z-10"
+        />
+
         {children}
+        <Navbar />
       </body>
     </html>
   );
