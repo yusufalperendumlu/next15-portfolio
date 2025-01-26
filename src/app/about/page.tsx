@@ -1,3 +1,5 @@
+import ContentAbout from "@/app/about/About";
+
 export const metadata = {
   title: {
     absolute: "About",
@@ -5,5 +7,9 @@ export const metadata = {
 };
 
 export default function About() {
-  return <h1>About</h1>;
+  return (
+    <>
+      <ContentAbout />
+    </>
+  );
 }
