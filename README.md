@@ -93,6 +93,7 @@ Kişisel bilgilerinizi ve projelerinizi `src/data` dizinindeki dosyalardan günc
 
 ## 📁 Proje Yapısı
 
+```
 ├── public/ # Statik dosyalar
 ├── src/
 │ ├── app/ # Sayfa bileşenleri
@@ -103,6 +104,7 @@ Kişisel bilgilerinizi ve projelerinizi `src/data` dizinindeki dosyalardan günc
 │ └── utils/ # Yardımcı fonksiyonlar
 ├── next.config.ts # Next.js konfigürasyonu
 └── tailwind.config.ts # Tailwind CSS konfigürasyonu
+```
 
 ## 🚀 Dağıtım
 
@@ -137,12 +139,12 @@ Yusuf Alperen Dumlu - [LinkedIn](https://www.linkedin.com/in/yusufalperendumlu/)
 Proje Linki: [https://github.com/yusufalperendumlu/next15-portfolio](https://github.com/yusufalperendumlu/next15-portfolio)
 
 Bu README dosyası:
-Projenin genel özelliklerini
-Kurulum adımlarını
-Çoklu dil desteği kullanımını
-Özelleştirme seçeneklerini
-Proje yapısını
-Dağıtım bilgilerini
-Katkıda bulunma adımlarını
-İletişim bilgilerini
-içermektedir. İsterseniz bu içeriği projenize göre özelleştirebilir veya genişletebilirsiniz.
+- Projenin genel özelliklerini
+- Kurulum adımlarını
+- Çoklu dil desteği kullanımını
+- Özelleştirme seçeneklerini
+- Proje yapısını
+- Dağıtım bilgilerini
+- Katkıda bulunma adımlarını
+- İletişim bilgilerini içermektedir.
+İsterseniz bu içeriği projenize göre özelleştirebilir veya genişletebilirsiniz.
