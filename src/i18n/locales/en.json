@@ -1,0 +1,16 @@
+{
+  "nav": {
+    "home": "Home",
+    "about": "About",
+    "projects": "Projects",
+    "contact": "Contact"
+  },
+  "hero": {
+    "greeting": "Hi, I'm",
+    "role": "Frontend Developer"
+  },
+  "about": {
+    "title": "About Me",
+    "description": "Experienced in frontend development..."
+  }
+} 
