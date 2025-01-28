@@ -3,6 +3,8 @@
 import Link from "next/link";
 import { motion } from "framer-motion";
 
+import { t } from "@/utils/translate";
+
 import { FaGithub, FaLinkedin } from "react-icons/fa";
 import { SiGmail } from "react-icons/si";
 import { Button } from "@/components/ui/button";
@@ -19,7 +21,7 @@ const Header = () => {
       >
         <div className="flex flex-col items-center space-y-5 justify-center">
           <span className="text-white font-semibold text-xl">
-            Hello I&apos;m
+            {t("hero.greeting", "en")}
           </span>
           <span className="text-white font-semibold text-5xl">
             Yusuf Alperen Dumlu

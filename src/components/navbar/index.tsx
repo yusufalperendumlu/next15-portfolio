@@ -8,39 +8,40 @@ import { GoPerson } from "react-icons/go";
 import { LuLaptopMinimal } from "react-icons/lu";
 import { RiServiceLine } from "react-icons/ri";
 import { RiMailSendLine } from "react-icons/ri";
+import { t } from "@/utils/translate";
 
 const navLinks = [
   {
     id: 1,
-    label: "Home",
+    label: t("nav.home"),
     icon: AiOutlineHome,
     className: "w-6 h-6 text-white",
     href: "/",
   },
   {
     id: 2,
-    label: "About",
+    label: t("nav.about"),
     icon: GoPerson,
     className: "w-6 h-6 text-white",
     href: "/about",
   },
   {
     id: 3,
-    label: "experience",
+    label: t("nav.experience"),
     icon: LuLaptopMinimal,
     className: "w-6 h-6 text-white",
     href: "/experience",
   },
   {
     id: 4,
-    label: "Services",
+    label: t("nav.services"),
     icon: RiServiceLine,
     className: "w-6 h-6 text-white",
     href: "/services",
   },
   {
     id: 5,
-    label: "Contact",
+    label: t("nav.contact"),
     icon: RiMailSendLine,
     className: "w-6 h-6 text-white",
     href: "/contact",
@@ -49,7 +50,6 @@ const navLinks = [
 
 const Navbar = () => {
   const pathname = usePathname();
-
   return (
     <nav className="w-fit fixed bottom-5 rounded-xl flex justify-between items-center z-50">
       <Menubar>
