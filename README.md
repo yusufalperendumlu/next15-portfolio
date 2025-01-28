@@ -17,6 +17,7 @@ Modern ve kişiselleştirilebilir bir portfolio web sitesi. Next.js 15, TypeScri
 - [TypeScript](https://www.typescriptlang.org/)
 - [Tailwind CSS](https://tailwindcss.com/)
 - [Framer Motion](https://www.framer.com/motion/)
+- [Shadcn/UI](https://ui.shadcn.com/)
 
 ## 🚀 Kurulum
 
