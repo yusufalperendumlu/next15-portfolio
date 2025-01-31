@@ -66,7 +66,7 @@ export default function ContentContact() {
           })}
         </div>
         <div className="col-span-2">
-          <form className="w-full p-6 rounded-lg shadow-lg">
+          <form className="w-full p-6 rounded-lg shadow-lg" onSubmit={() => {}}>
             <div className="mb-4">
               <input
                 type="text"
@@ -92,7 +92,9 @@ export default function ContentContact() {
 
             <button
               type="submit"
-              className="w-1/3 px-4 py-2 text-lg font-semibold text-white bg-blue-500 rounded-md hover:bg-blue-600 focus:outline-none focus:ring-2 focus:ring-blue-300"
+              className="w-1/3 px-4 py-2 text-lg font-semibold text-white bg-blue-500 rounded-md hover:bg-blue-600 focus:outline-none focus:ring-2 focus:ring-blue-300 cursor-pointer"
+              onClick={() => {}}
+              disabled
             >
               Send Message
             </button>
