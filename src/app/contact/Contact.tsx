@@ -20,18 +20,21 @@ const socialContact = [
     link: "mailto:yusufalperendumlu@gmail.com",
     text: "Email",
     desc: "yusufalperendumlu@gmail.com",
+    target: "_blank",
   },
   {
     icon: <IoLogoLinkedin className="w-8 h-8 text-white" />,
     link: "https://www.linkedin.com/messaging/compose/?recipient=in/yusufalperendumlu",
     text: "Linkedin",
     desc: "in/yusufalperendumlu",
+    target: "_blank",
   },
   {
     icon: <BsTwitterX className="w-8 h-8 text-white" />,
     link: "https://www.x.com",
     text: "X",
     desc: "alperenndumlu",
+    target: "_blank",
   },
 ];
 
@@ -58,7 +61,9 @@ export default function ContentContact() {
                 </CardContent>
                 <CardFooter>
                   <Button variant="ghost" className="text-white">
-                    <Link href={social.link}>Send a message</Link>
+                    <Link href={social.link} target={social.target}>
+                      Send a message
+                    </Link>
                   </Button>
                 </CardFooter>
               </Card>
