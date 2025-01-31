@@ -31,12 +31,24 @@ const Header = () => {
           </span>
         </div>
         <div className="flex justify-center space-x-5 mt-10">
-          <Button variant="outline" size="lg" className="text-white">
+          <Button
+            variant="outline"
+            size="lg"
+            className="text-white"
+            onClick={() => {
+              window.open(
+                "https://drive.google.com/file/d/1Uw3HvOcj9njLum5kw2rZMSDS9bUsmO28/view?usp=sharing",
+                "_blank"
+              );
+            }}
+          >
             Download CV
           </Button>
-          <Button variant="secondary" size="lg">
-            Let&apos;s talk
-          </Button>
+          <Link href="/contact" className="p-0 items-start flex">
+            <Button variant="secondary" size="lg">
+              Let&apos;s talk
+            </Button>
+          </Link>
         </div>
       </motion.div>
       {/* <div>
@@ -48,18 +60,18 @@ const Header = () => {
         transition={{ duration: 0.8, ease: "easeOut", delay: 0.3 }}
       >
         <div className="flex justify-center items-center space-x-5 mt-10 relative">
-          <div className="relative flex items-center before:content-[''] before:block before:w-16 before:h-[2px] before:bg-white before:mr-3 "></div>
+          <div className="relative flex items-center before:content-[''] before:block before:w-16 before:h-[2px] before:bg-white before:mr-3"></div>
           <Link href="https://github.com/yusufalperendumlu" target="_blank">
-            <FaGithub className="text-white text-2xl" />
+            <FaGithub className="text-white text-2xl hover:text-black  transition-all duration-200 ease-linear" />
           </Link>
           <Link
             href="https://www.linkedin.com/in/yusuf-alperen-dumlu/"
             target="_blank"
           >
-            <FaLinkedin className="text-white text-2xl" />
+            <FaLinkedin className="text-white text-2xl hover:text-[#0a66c2]  transition-all duration-200 ease-linear" />
           </Link>
           <Link href="mailto:yusufalperendumlu@gmail.com">
-            <SiGmail className="text-white text-2xl" />
+            <SiGmail className="text-white text-2xl hover:text-red-500  transition-all duration-200 ease-linear" />
           </Link>
           <div className="relative flex items-center after:content-[''] after:block after:w-16 after:h-[2px] after:bg-white after:ml-3"></div>
         </div>

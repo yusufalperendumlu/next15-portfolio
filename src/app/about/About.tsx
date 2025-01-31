@@ -11,6 +11,7 @@ import { Button } from "@/components/ui/button";
 import { FaAward } from "react-icons/fa";
 import { MdOutlinePeopleOutline } from "react-icons/md";
 import { GoProjectRoadmap } from "react-icons/go";
+import Link from "next/link";
 
 import Title from "@/components/Title";
 
@@ -78,9 +79,11 @@ export default function ContentAbout() {
             </span>
           </div>
           <div className="flex justify-start space-x-5 mt-10 w-full">
-            <Button variant="secondary" size="lg">
-              Let&apos;s talk
-            </Button>
+            <Link href="/contact">
+              <Button variant="secondary" size="lg">
+                Let&apos;s talk
+              </Button>
+            </Link>
           </div>
         </div>
       </div>

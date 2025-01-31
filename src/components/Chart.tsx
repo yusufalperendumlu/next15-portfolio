@@ -52,10 +52,6 @@ export function Chart() {
 
   return (
     <Card className="flex flex-col bg-opacity-0 hover:bg-opacity-0">
-      {/* <CardHeader className="items-center pb-0">
-        <CardTitle>Pie Chart - Donut with Text</CardTitle>
-        <CardDescription>January - June 2024</CardDescription>
-      </CardHeader> */}
       <CardContent className="flex-1 pb-0">
         <ChartContainer
           config={chartConfig}
@@ -86,7 +82,7 @@ export function Chart() {
                         <tspan
                           x={viewBox.cx}
                           y={viewBox.cy}
-                          className="fill-foreground text-3xl font-bold"
+                          className="fill-foreground text-3xl font-semibold "
                         >
                           {totalVisitors.toLocaleString()}
                         </tspan>
