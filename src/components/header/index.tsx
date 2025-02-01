@@ -37,7 +37,7 @@ const Header = () => {
             className="text-white"
             onClick={() => {
               window.open(
-                "https://drive.google.com/file/d/1Uw3HvOcj9njLum5kw2rZMSDS9bUsmO28/view?usp=sharing",
+                "",
                 "_blank"
               );
             }}
