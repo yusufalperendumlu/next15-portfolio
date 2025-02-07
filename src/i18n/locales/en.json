@@ -3,7 +3,10 @@
     "home": "Home",
     "about": "About",
     "projects": "Projects",
+    "experience": "Experience",
+    "services": "Services",
     "contact": "Contact"
+
   },
   "hero": {
     "greeting": "Hi, I'm",

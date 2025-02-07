@@ -11,6 +11,10 @@ export default async function ProductReview({
     notFound();
   }
 
+  if (parseInt(reviewId) === 1) {
+    throw new Error("Review not found!");
+  }
+
   return (
     <h1>
       Product Review: {productId} / {reviewId}
