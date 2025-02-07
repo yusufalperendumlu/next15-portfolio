@@ -1,5 +1,6 @@
 "use client";
 
+import { motion } from "framer-motion";
 import {
   Card,
   CardContent,
@@ -7,12 +8,13 @@ import {
   CardHeader,
   CardTitle,
 } from "@/components/ui/card";
-
+import { CheckCircle } from "lucide-react";
 import Title from "@/components/Title";
 
 const services = [
   {
     header: "UI/UX Design",
+    icon: "🎨",
     substances: [
       "Wireframing",
       "Prototyping",
@@ -23,6 +25,7 @@ const services = [
   },
   {
     header: "Frontend Development",
+    icon: "💻",
     substances: [
       "Web Design",
       "Web Hosting",
@@ -34,6 +37,7 @@ const services = [
   },
   {
     header: "Mobile Development",
+    icon: "📱",
     substances: [
       "Mobile Design",
       "Mobile Hosting",
@@ -43,6 +47,7 @@ const services = [
   },
   {
     header: "Digital Marketing",
+    icon: "📈",
     substances: [
       "SEO",
       "PPC",
@@ -53,45 +58,87 @@ const services = [
   },
 ];
 
+const containerVariants = {
+  hidden: { opacity: 0 },
+  visible: {
+    opacity: 1,
+    transition: {
+      staggerChildren: 0.2,
+    },
+  },
+};
+
+const cardVariants = {
+  hidden: { opacity: 0, y: 20 },
+  visible: {
+    opacity: 1,
+    y: 0,
+    transition: {
+      duration: 0.5,
+    },
+  },
+};
+
 export default function ContentServices() {
   return (
-    <div className="flex flex-col container relative items-center justify-center h-screen max-w-fit space-y-10">
-      <Title subTitle="What I offer" title="Services" />
-      <div className="flex flex-row items-center justify-center w-1/2 space-x-10">
-        {services.map((service) => (
-          <Card
-            key={service.header}
-            className="h-full w-[35vw] cursor-pointer hover:scale-[1.02] transition-all duration-200 ease-linear"
-          >
-            <CardHeader className="flex items-center justify-center bg-slate-600 z-40 rounded-b-full">
-              <CardTitle className="text-white">{service.header}</CardTitle>
-            </CardHeader>
-            <CardContent className="flex text-clip mt-8">
-              <div className="flex flex-col items-center justify-start text-clip space-y-2">
-                {service.substances.map((substance) => (
-                  <CardDescription
-                    key={substance}
-                    className="flex w-full items-start gap-4 justify-start text-white text-sm font-semibold "
+    <section className="py-20 px-4 min-h-screen">
+      <div className="container mx-auto max-w-7xl">
+        <Title subTitle="What I offer" title="Services" />
+
+        <motion.div
+          variants={containerVariants}
+          initial="hidden"
+          animate="visible"
+          className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 mt-16"
+        >
+          {services.map((service) => (
+            <motion.div key={service.header} variants={cardVariants}>
+              <Card
+                className="h-full group hover:shadow-2xl transition-all duration-300 
+                bg-gradient-to-b from-zinc-900 to-zinc-950 
+                border border-zinc-800 hover:border-zinc-700
+                relative overflow-hidden"
+              >
+                {/* Gradient overlay on hover */}
+                <div
+                  className="absolute inset-0 opacity-0 group-hover:opacity-100 transition-opacity duration-300
+                  bg-gradient-to-r from-purple-500/10 via-pink-500/10 to-orange-500/10"
+                />
+
+                <CardHeader className="relative z-10">
+                  <div
+                    className="text-4xl mb-4 bg-gradient-to-r from-purple-500 to-pink-500 
+                    text-transparent bg-clip-text group-hover:scale-110 transition-transform duration-300"
                   >
-                    <svg
-                      stroke="currentColor"
-                      fill="currentColor"
-                      strokeWidth="0"
-                      viewBox="0 0 1024 1024"
-                      height="1em"
-                      width="1em"
-                      xmlns="http://www.w3.org/2000/svg"
-                    >
-                      <path d="M912 190h-69.9c-9.8 0-19.1 4.5-25.1 12.2L404.7 724.5 207 474a32 32 0 0 0-25.1-12.2H112c-6.7 0-10.4 7.7-6.3 12.9l273.9 347c12.8 16.2 37.4 16.2 50.3 0l488.4-618.9c4.1-5.1.4-12.8-6.3-12.8z"></path>
-                    </svg>
-                    {substance}
-                  </CardDescription>
-                ))}
-              </div>
-            </CardContent>
-          </Card>
-        ))}
+                    {service.icon}
+                  </div>
+                  <CardTitle className="text-xl font-bold text-white">
+                    {service.header}
+                  </CardTitle>
+                </CardHeader>
+
+                <CardContent className="relative z-10 pt-6">
+                  <div className="space-y-3">
+                    {service.substances.map((substance) => (
+                      <CardDescription
+                        key={substance}
+                        className="flex items-center gap-3 text-zinc-400 group-hover:text-zinc-300 
+                        transition-colors duration-300"
+                      >
+                        <CheckCircle
+                          className="w-4 h-4 text-purple-500 group-hover:text-pink-500 
+                          transition-colors duration-300"
+                        />
+                        <span className="text-sm font-medium">{substance}</span>
+                      </CardDescription>
+                    ))}
+                  </div>
+                </CardContent>
+              </Card>
+            </motion.div>
+          ))}
+        </motion.div>
       </div>
-    </div>
+    </section>
   );
 }
